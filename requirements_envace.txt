@@ -1,0 +1,54 @@
+# EnvACE-specific pinned dependencies.
+#
+# These are the versions used to validate a 4B share-mode training run
+# end-to-end. If you're rebuilding the env from scratch, install these
+# after activating the `envace` conda env:
+#
+#   conda create -n envace python==3.12 -y
+#   conda activate envace
+#   pip install -r requirements_envace.txt
+#   pip install flash-attn==2.7.4.post1 --no-build-isolation --no-cache-dir
+#   pip install -e .
+
+# --- Core training stack (fixed, must match the wandb config we reference) ---
+torch==2.6.0
+torchvision==0.21.0
+torchao==0.9.0
+torchdata==0.11.0
+transformers==4.53.2
+ray==2.49.2
+sglang[all]==0.4.6.post5
+tensordict==0.6.2
+flashinfer-python==0.2.5
+torch_memory_saver==0.0.9
+
+# --- Data / config / logging ---
+accelerate==1.13.0
+datasets==4.8.4
+huggingface_hub==0.36.2
+hydra-core==1.3.2
+pyarrow==23.0.1
+pandas==3.0.2
+numpy==2.4.4
+wandb==0.26.0
+
+# --- PPO / algo utilities ---
+codetiming==1.4.0
+dill==0.4.1
+peft==0.17.1
+pylatexenc==2.10
+pybind11==3.0.4
+cachetools==7.0.5
+
+# --- Service / GPU util (used by A3B judge + gpu-util guard on shared clusters) ---
+fastapi==0.136.0
+uvicorn==0.44.0
+nvidia-ml-py==13.595.45
+pynvml==13.0.1
+
+# --- Misc ---
+hf_transfer==0.1.9
+packaging==26.0
+
+# ---- Install flash-attn separately (needs --no-build-isolation) ----
+# flash-attn==2.7.4.post1
