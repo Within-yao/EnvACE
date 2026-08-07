@@ -17,7 +17,7 @@ torchao==0.9.0
 torchdata==0.11.0
 transformers==4.53.2
 ray==2.49.2
-sglang[all]==0.4.6.post5
+sglang[all]==0.5.16
 tensordict==0.6.2
 flashinfer-python==0.2.5
 torch_memory_saver==0.0.9
