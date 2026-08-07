@@ -42,7 +42,7 @@ cachetools==7.0.5
 
 # --- Service / GPU util (used by A3B judge + gpu-util guard on shared clusters) ---
 fastapi==0.136.0
-uvicorn==0.44.0
+uvicorn==0.52.1
 nvidia-ml-py==13.595.45
 pynvml==13.0.1
 
