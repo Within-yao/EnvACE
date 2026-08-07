@@ -20,7 +20,7 @@ ray==2.49.2
 sglang[all]==0.4.6.post5
 tensordict==0.6.2
 flashinfer-python==0.2.5
-torch_memory_saver==0.0.9
+torch_memory_saver==0.0.9.post1
 
 # --- Data / config / logging ---
 accelerate==1.13.0
