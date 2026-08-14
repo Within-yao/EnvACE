@@ -15,7 +15,7 @@ torch==2.6.0
 torchvision==0.21.0
 torchao==0.9.0
 torchdata==0.11.0
-transformers==4.53.2
+transformers==5.15.0
 ray==2.49.2
 sglang[all]==0.4.6.post5
 tensordict==0.6.2
