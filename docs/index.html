@@ -134,25 +134,7 @@
   .btn.primary { background: var(--act); border-color: var(--act); color: #fff; }
   .btn.primary:hover { background: var(--act-deep); border-color: var(--act-deep); }
   .btn .glyph { font-family: var(--mono); font-size: 11px; opacity: .7; }
-  .btn.soon {
-    background: transparent;
-    border-style: dashed;
-    box-shadow: none;
-    color: var(--muted);
-    font-weight: 600;
-    cursor: default;
-  }
-  .btn.soon .hf { font-size: 17px; line-height: 1; filter: saturate(.85); }
-  .btn.soon small {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--reh-deep);
-    background: var(--reh-soft);
-    border-radius: 999px;
-    padding: 2px 8px;
-  }
+  .btn .hf { font-size: 17px; line-height: 1; filter: saturate(.85); }
 
   @media (max-width: 820px) {
     .masthead { grid-template-columns: 1fr; }
@@ -422,9 +404,9 @@
         <a class="btn primary" href="https://arxiv.org/abs/2608.06197"><span class="glyph">arXiv</span> Read the paper</a>
         <a class="btn" href="https://github.com/Within-yao/EnvACE"><span class="glyph">git</span> Code</a>
         <a class="btn" href="#citation"><span class="glyph">tex</span> BibTeX</a>
-        <span class="btn soon" title="Model weights are coming to Hugging Face in the next few days">
-          <span class="hf" aria-hidden="true">🤗</span> Weights <small>soon</small>
-        </span>
+        <a class="btn" href="https://huggingface.co/collections/Team-ACE/envace-6a9e2c636a706f3d8625ba62">
+          <span class="hf" aria-hidden="true">🤗</span> Weights
+        </a>
       </nav>
     </div>
   </div>
@@ -624,6 +606,7 @@
 <footer>
   <div class="wrap">
     <p class="measure">Code builds on <a href="https://github.com/langfengQ/DrMAS">Dr. MAS</a>, <a href="https://github.com/langfengQ/verl-agent">verl-agent</a> and <a href="https://github.com/volcengine/verl">verl</a>. Released under the Apache 2.0 licence.</p>
+    <p class="measure">Model weights: <a href="https://huggingface.co/Team-ACE/EnvACE-Qwen3-8B">EnvACE-Qwen3-8B</a> and <a href="https://huggingface.co/Team-ACE/EnvACE-Qwen3-1.7B">EnvACE-Qwen3-1.7B</a> on Hugging Face.</p>
     <p class="measure">Questions and issues: <a href="https://github.com/Within-yao/EnvACE/issues">github.com/Within-yao/EnvACE/issues</a></p>
   </div>
 </footer>
