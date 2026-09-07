@@ -14,7 +14,7 @@
   <a href="https://github.com/Within-yao/EnvACE">
     <img src="https://img.shields.io/badge/code-EnvACE-black?logo=github" alt="Code">
   </a>
-  <a href="https://huggingface.co/collections/Team-ACE/envace">
+  <a href="https://huggingface.co/collections/Team-ACE/envace-6a9e2c636a706f3d8625ba62">
     <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-ffcc00" alt="Hugging Face models">
   </a>
   <a href="./LICENSE">
