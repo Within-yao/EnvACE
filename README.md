@@ -14,6 +14,9 @@
   <a href="https://github.com/Within-yao/EnvACE">
     <img src="https://img.shields.io/badge/code-EnvACE-black?logo=github" alt="Code">
   </a>
+  <a href="https://huggingface.co/collections/Team-ACE/envace">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-ffcc00" alt="Hugging Face models">
+  </a>
   <a href="./LICENSE">
     <img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License">
   </a>
@@ -34,7 +37,7 @@ Subsequent decisions are conditioned on the policy's *own* rehearsed responses, 
 
 ## 🚀 News
 
-- [2026-08-08] Model weights are coming to Hugging Face in the next few days.
+- [2026-09-07] Model weights are released on Hugging Face: [EnvACE-Qwen3-8B](https://huggingface.co/Team-ACE/EnvACE-Qwen3-8B) and [EnvACE-Qwen3-1.7B](https://huggingface.co/Team-ACE/EnvACE-Qwen3-1.7B).
 - [2026-08-07] We released the code and paper for EnvACE.
 
 ## Highlights
@@ -43,6 +46,22 @@ Subsequent decisions are conditioned on the policy's *own* rehearsed responses, 
 - **Role-wise GRPO.** Per-role advantage baselines, shared policy parameters, jointly optimized end-to-end from task-success reward.
 - **Test-time rehearsal.** Two modes — Parallel (independent attempts) and Sequential (each attempt sees prior rehearsals + revisions) — condensed into a rehearsal memory before a single external execution.
 - **Reference results.** EnvACE-8B: **Overall 32.91** across BFCL-v4 / τ²-Bench / VitaBench; **TF1 46.78** on FinMCP-Bench — outperforming Simulator-8B, TOUCAN-7B, EnvScaler-8B, AWM-8B/14B, ScaleEnv-8B under the same open-source scale.
+
+## Model Weights
+
+| Model | Backbone | Params | Link |
+|---|---|---|---|
+| EnvACE-Qwen3-8B | [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) | 8.2B | [🤗 Team-ACE/EnvACE-Qwen3-8B](https://huggingface.co/Team-ACE/EnvACE-Qwen3-8B) |
+| EnvACE-Qwen3-1.7B | [Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B) | 2.0B | [🤗 Team-ACE/EnvACE-Qwen3-1.7B](https://huggingface.co/Team-ACE/EnvACE-Qwen3-1.7B) |
+
+Both checkpoints are the shared acting/rehearsal policy trained with role-wise GRPO. They use the
+Qwen3 chat template and native function-calling format, so they drop into any standard Qwen3
+tool-calling client:
+
+```bash
+vllm serve Team-ACE/EnvACE-Qwen3-8B --max-model-len 32768 \
+    --enable-auto-tool-choice --tool-call-parser hermes
+```
 
 ## Installation
 
