@@ -49,10 +49,10 @@ Subsequent decisions are conditioned on the policy's *own* rehearsed responses, 
 
 ## Model Weights
 
-| Model | Backbone | Params | Link |
-|---|---|---|---|
-| EnvACE-Qwen3-8B | [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) | 8.2B | [🤗 Team-ACE/EnvACE-Qwen3-8B](https://huggingface.co/Team-ACE/EnvACE-Qwen3-8B) |
-| EnvACE-Qwen3-1.7B | [Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B) | 2.0B | [🤗 Team-ACE/EnvACE-Qwen3-1.7B](https://huggingface.co/Team-ACE/EnvACE-Qwen3-1.7B) |
+| Model | Backbone | Link |
+|---|---|---|
+| EnvACE-Qwen3-8B | [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) | [🤗 Team-ACE/EnvACE-Qwen3-8B](https://huggingface.co/Team-ACE/EnvACE-Qwen3-8B) |
+| EnvACE-Qwen3-1.7B | [Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B) | [🤗 Team-ACE/EnvACE-Qwen3-1.7B](https://huggingface.co/Team-ACE/EnvACE-Qwen3-1.7B) |
 
 Both checkpoints are the shared acting/rehearsal policy trained with role-wise GRPO. They use the
 Qwen3 chat template and native function-calling format, so they drop into any standard Qwen3
